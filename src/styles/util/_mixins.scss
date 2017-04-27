@@ -1,0 +1,10 @@
+@mixin logoAnimationFadeIn($count) {
+    @for $i from 1 through $count {
+        &:nth-child(#{$count - $i}) {
+            animation-name: logoAnimation;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+            animation-delay: #{$i * 150}ms;
+        }
+    }
+}
